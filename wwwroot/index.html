@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dotnet + htmx</title>
+    <script src="/js/htmx.min.js"></script>
+    <style>
+      table {
+        padding: 12px;
+        margin-top: 10px;
+      }
+      td, th {
+        padding: 8px;
+      }
+      .btn {
+        background-color: white;
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 16px;
+      }
+
+      .btn > img {
+        width: 18px;
+        height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, world</h1>
+    <button class="btn" hx-target="#weatherforecasts" hx-get="/weatherforecast" hx-swap="innerHTML" hx-disabled-elt="this">
+      Get Weather Forecasts
+      <img class="htmx-indicator" src="/svg-loaders/ball-triangle-black.svg" />
+    </button>
+    <div id="weatherforecasts"></div>
+  </body>
+</html>

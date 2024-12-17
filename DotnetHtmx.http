@@ -1,0 +1,6 @@
+@DotnetHtmx_HostAddress = http://localhost:5032
+
+GET {{DotnetHtmx_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
